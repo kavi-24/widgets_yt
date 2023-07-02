@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WheelScroll extends StatefulWidget {
-  WheelScroll({Key? key}) : super(key: key);
+  const WheelScroll({Key? key}) : super(key: key);
 
   @override
   State<WheelScroll> createState() => _WheelScrollState();
@@ -24,7 +24,7 @@ class _WheelScrollState extends State<WheelScroll> {
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
+          SizedBox(
             width: 70,
             child: ListWheelScrollView.useDelegate(
                 controller: _controller,
@@ -32,7 +32,7 @@ class _WheelScrollState extends State<WheelScroll> {
                 perspective: 0.005,
                 itemExtent: 50,
                 physics:
-                    ScrollPhysics(), // always land on the number rather than sliding away
+                    const ScrollPhysics(), // always land on the number rather than sliding away
                 childDelegate: ListWheelChildBuilderDelegate(
                   childCount: 13,
                   builder: (context, index) {
@@ -42,10 +42,10 @@ class _WheelScrollState extends State<WheelScroll> {
                   },
                 )),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
-          Container(
+          SizedBox(
             width: 70,
             child: ListWheelScrollView.useDelegate(
                 controller: _controller,
@@ -53,7 +53,7 @@ class _WheelScrollState extends State<WheelScroll> {
                 perspective: 0.005,
                 itemExtent: 50,
                 physics:
-                    ScrollPhysics(), // always land on the number rather than sliding away
+                    const ScrollPhysics(), // always land on the number rather than sliding away
                 childDelegate: ListWheelChildBuilderDelegate(
                   childCount: 60,
                   builder: (context, index) {
@@ -63,10 +63,10 @@ class _WheelScrollState extends State<WheelScroll> {
                   },
                 )),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
-          Container(
+          SizedBox(
             width: 70,
             child: ListWheelScrollView.useDelegate(
                 controller: _controller,
@@ -74,7 +74,7 @@ class _WheelScrollState extends State<WheelScroll> {
                 perspective: 0.005,
                 itemExtent: 50,
                 physics:
-                    ScrollPhysics(), // always land on the number rather than sliding away
+                    const ScrollPhysics(), // always land on the number rather than sliding away
                 childDelegate: ListWheelChildBuilderDelegate(
                   childCount: 2,
                   builder: (context, index) {
@@ -114,7 +114,7 @@ class Minutes extends StatelessWidget {
         child: Center(
           child: Text(
             minute > 9 ? minute.toString() : "0" + minute.toString(),
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 40, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
@@ -136,7 +136,7 @@ class Hours extends StatelessWidget {
         child: Center(
           child: Text(
             hour > 9 ? hour.toString() : "0" + hour.toString(),
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 40, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
@@ -158,7 +158,7 @@ class AMPM extends StatelessWidget {
         child: Center(
           child: Text(
             am_pm,
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 40, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),

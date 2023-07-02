@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TikTokStyleSwipe extends StatefulWidget {
-  TikTokStyleSwipe({Key? key}) : super(key: key);
+  const TikTokStyleSwipe({Key? key}) : super(key: key);
 
   @override
   State<TikTokStyleSwipe> createState() => _TikTokStyleSwipeState();
@@ -16,7 +16,7 @@ class _TikTokStyleSwipeState extends State<TikTokStyleSwipe> {
     return Scaffold(
       body: PageView(
         controller: _controller,
-        children: [
+        children: const [
           Posts(color: Colors.deepPurple),
           Posts(color: Colors.green,),
           Posts(color: Colors.red),
@@ -31,7 +31,7 @@ class _TikTokStyleSwipeState extends State<TikTokStyleSwipe> {
           Posts(color: Colors.red),
         ],
         scrollDirection: Axis.vertical,
-        physics: ScrollPhysics(),
+        physics: const ScrollPhysics(),
       ),
     );
   }
@@ -40,7 +40,7 @@ class _TikTokStyleSwipeState extends State<TikTokStyleSwipe> {
 class Posts extends StatelessWidget {
   
   final Color color;
-  Posts({required this.color});
+  const Posts({Key? key, required this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

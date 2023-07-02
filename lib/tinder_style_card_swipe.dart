@@ -3,7 +3,7 @@ import 'package:flutter_swipable/flutter_swipable.dart';
 
 // Requires flutter_swipable package
 class TinderStyleCardSwipe extends StatefulWidget {
-  TinderStyleCardSwipe({Key? key}) : super(key: key);
+  const TinderStyleCardSwipe({Key? key}) : super(key: key);
 
   @override
   State<TinderStyleCardSwipe> createState() => _TinderStyleCardSwipeState();
@@ -12,9 +12,9 @@ class TinderStyleCardSwipe extends StatefulWidget {
 class _TinderStyleCardSwipeState extends State<TinderStyleCardSwipe> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: Container(
+        child: SizedBox(
           height: 300,
           width: 200,
           child: Stack(
@@ -36,7 +36,7 @@ class TinderCard extends StatelessWidget {
   
   final Color color;
 
-  TinderCard({required this.color});
+  const TinderCard({Key? key, required this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

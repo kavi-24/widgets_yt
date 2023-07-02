@@ -25,7 +25,7 @@ class PercentIndicator extends StatelessWidget {
                 progressColor: Colors.deepPurple,
                 backgroundColor: Colors.purple.shade100,
                 circularStrokeCap: CircularStrokeCap.round, // modfy end points
-                center: Text(
+                center: const Text(
                   "40%",
                   style: TextStyle(fontSize: 50),
                 ),

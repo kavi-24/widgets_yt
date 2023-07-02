@@ -15,7 +15,7 @@ class _MySlidableState extends State<MySlidable> {
       body: Center(
         child: Slidable(
           startActionPane: ActionPane(
-            motion: StretchMotion(),
+            motion: const StretchMotion(),
             children: [
               SlidableAction(onPressed: ((context) {
                 // Call number
@@ -34,7 +34,7 @@ class _MySlidableState extends State<MySlidable> {
             ],
           ),
           endActionPane: ActionPane(
-            motion: StretchMotion(),
+            motion: const StretchMotion(),
             children: [
               SlidableAction(onPressed: ((context) {
                 // Delete number
@@ -46,7 +46,7 @@ class _MySlidableState extends State<MySlidable> {
           ),
           child: Container(
             color: Colors.grey[300],
-            child: ListTile(
+            child: const ListTile(
               title: Text("Contact 1"),
               subtitle: Text("+91 636 362 8542"),
               leading: Icon(

@@ -23,12 +23,12 @@ class SlideToState extends State<SlideTo> {
             elevation: 0, // set shadow to 0
             innerColor: Colors.deepPurple,
             outerColor: Colors.deepPurple[200],
-            sliderButtonIcon: Icon(
+            sliderButtonIcon: const Icon(
               Icons.lock_open,
               color: Colors.white,
             ),
             text: "Slide to Unlock",
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
               color: Colors.white,
               fontSize: 24,
             ),

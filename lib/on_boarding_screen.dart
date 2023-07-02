@@ -12,7 +12,7 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
   bool onLastPage = false;
 
   @override
@@ -27,13 +27,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               onLastPage = index == 2;
             });
           },
-          children: [
+          children: const [
           Page1(),
           Page2(),
           Page3(),
         ]),
         Container(
-          alignment: Alignment(0, 0.75),
+          alignment: const Alignment(0, 0.75),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -42,7 +42,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 onTap: () {
                   _controller.jumpToPage(2);
                 },
-                child: Text("skip")
+                child: const Text("skip")
                 ),
 
               SmoothPageIndicator(
@@ -53,12 +53,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               !onLastPage ? GestureDetector(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return HomePage();
+                    return const HomePage();
                   }));
                 },
-                child: Text("next")
+                child: const Text("next")
                 ) : GestureDetector(
-                child: Text("done")
+                child: const Text("done")
                 ),
 
             ],
@@ -74,7 +74,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: 
         Text("Home Page"),
@@ -84,11 +84,13 @@ class HomePage extends StatelessWidget {
 }
 
 class Page1 extends StatelessWidget {
+  const Page1({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.pink[100],
-      child: Center(
+      child: const Center(
         child: Text("Page1"),
       ),
     );
@@ -96,11 +98,13 @@ class Page1 extends StatelessWidget {
 }
 
 class Page2 extends StatelessWidget {
+  const Page2({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.deepPurple[100],
-      child: Center(
+      child: const Center(
         child: Text("Page2"),
       ),
     );
@@ -108,11 +112,13 @@ class Page2 extends StatelessWidget {
 }
 
 class Page3 extends StatelessWidget {
+  const Page3({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.blue[100],
-      child: Center(
+      child: const Center(
         child: Text("Page3"),
       ),
     );

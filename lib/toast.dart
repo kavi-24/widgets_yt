@@ -10,7 +10,7 @@ class MyToast extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Toast Button"),
+        title: const Text("Toast Button"),
       ),
       body: Center(
         child: ElevatedButton(
@@ -21,7 +21,7 @@ class MyToast extends StatelessWidget {
               textColor: Colors.white
             );
           },
-          child: Text("Show Toast", style: TextStyle(
+          child: const Text("Show Toast", style: TextStyle(
             color: Colors.white
           ),),
         ),

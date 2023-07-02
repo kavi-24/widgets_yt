@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SmoothButtonPress extends StatefulWidget {
-  SmoothButtonPress({Key? key}) : super(key: key);
+  const SmoothButtonPress({Key? key}) : super(key: key);
 
   @override
   State<SmoothButtonPress> createState() => _SmoothButtonPressState();
@@ -32,7 +32,7 @@ class _SmoothButtonPressState extends State<SmoothButtonPress> {
         onTap: buttonPressed,
         child: Center(
           child: AnimatedContainer(
-            duration: Duration(milliseconds: 200),
+            duration: const Duration(milliseconds: 200),
             height: 160,
             width: 160,
             child: Icon(
@@ -46,7 +46,7 @@ class _SmoothButtonPressState extends State<SmoothButtonPress> {
               boxShadow: isButtonPressed ? [] : [
                 BoxShadow(
                   color: Colors.grey.shade500,
-                  offset: Offset(6, 6),
+                  offset: const Offset(6, 6),
                   blurRadius: 15,
                   spreadRadius: 1
                 ),

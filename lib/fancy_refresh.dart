@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 
 class FancyRefresh extends StatelessWidget {
+  const FancyRefresh({Key? key}) : super(key: key);
+
   
   Future<void> _handleRefresh() async {
     // reloading take some time
-    return await Future.delayed(Duration(seconds: 2));
+    return await Future.delayed(const Duration(seconds: 2));
   }
 
   @override

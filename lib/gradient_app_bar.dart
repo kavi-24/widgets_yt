@@ -5,7 +5,7 @@ class GradientAppBar extends StatelessWidget {
   final String title;
   final double barHeight = 50.0;
 
-  GradientAppBar(this.title);
+  const GradientAppBar(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,20 +14,20 @@ class GradientAppBar extends StatelessWidget {
         .padding
         .top;
 
-    return new Container(
+    return Container(
       padding: EdgeInsets.only(top: statusbarHeight),
       height: statusbarHeight + barHeight,
       child: Center(
         child: Text(
           title,
-          style: TextStyle(fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
             colors: [Colors.red, Colors.blue],
-            begin: const FractionalOffset(0.0, 0.0),
-            end: const FractionalOffset(0.5, 0.0),
+            begin: FractionalOffset(0.0, 0.0),
+            end: FractionalOffset(0.5, 0.0),
             stops: [0.0, 1.0],
             tileMode: TileMode.clamp
         ),

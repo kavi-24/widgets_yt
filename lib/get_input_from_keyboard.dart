@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GetInputFromKBD extends StatefulWidget {
-  GetInputFromKBD({Key? key}) : super(key: key);
+  const GetInputFromKBD({Key? key}) : super(key: key);
 
   @override
   State<GetInputFromKBD> createState() => _GetInputFromKBDState();
@@ -24,7 +24,7 @@ class _GetInputFromKBDState extends State<GetInputFromKBD> {
                 child: Center(
                     child: Text(
                       userPost,
-                      style: TextStyle(fontSize: 35)
+                      style: const TextStyle(fontSize: 35)
                       )
                   )
             ),
@@ -32,15 +32,15 @@ class _GetInputFromKBDState extends State<GetInputFromKBD> {
               controller: _textController,
               decoration: InputDecoration(
                   hintText: "What's on your mind ?",
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   suffixIcon: IconButton(
                     onPressed: () {
                       _textController.clear();
                     },
-                    icon: Icon(Icons.clear),
+                    icon: const Icon(Icons.clear),
                   )),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             MaterialButton(
                 onPressed: () {
                   setState(() {
@@ -48,7 +48,7 @@ class _GetInputFromKBDState extends State<GetInputFromKBD> {
                   });
                 },
                 color: Colors.blue,
-                child: Text(
+                child: const Text(
                   "POST",
                   style: TextStyle(color: Colors.white),
                 )),

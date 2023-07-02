@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ConditionSwitchNotifier extends ChangeNotifier {
   String? currentValue;
@@ -22,13 +23,13 @@ Widget buttonStack({required BuildContext context, required String title, requir
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontFamily: 'Roboto',
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
         ),
-        SizedBox(width: 20,),
+        const SizedBox(width: 20,),
         Switch(
           value: kValue == title ? true : false,
           onChanged: (val) {

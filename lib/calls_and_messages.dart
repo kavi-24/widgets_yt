@@ -43,7 +43,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class CallsAndMessages extends StatefulWidget {
 
-  CallsAndMessages({Key? key}) : super(key: key);
+  const CallsAndMessages({Key? key}) : super(key: key);
 
   @override
   State<CallsAndMessages> createState() => _CallsAndMessagesState();
@@ -72,14 +72,14 @@ class _CallsAndMessagesState extends State<CallsAndMessages> {
                 }
               },
               color: Colors.blue,
-              child: Text(
+              child: const Text(
                 "Call Me",
                 style: TextStyle(
                   color: Colors.white
                 ),
                 ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             MaterialButton(
               onPressed: () async {
                 // if (await canLaunch(_url)) {
@@ -91,14 +91,14 @@ class _CallsAndMessagesState extends State<CallsAndMessages> {
                 }
               },
               color: Colors.blue,
-              child: Text(
+              child: const Text(
                 "Text Me",
                 style: TextStyle(
                   color: Colors.white
                 ),
                 ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             MaterialButton(
               onPressed: () async {
                 if (await canLaunch(_url)) {
@@ -106,7 +106,7 @@ class _CallsAndMessagesState extends State<CallsAndMessages> {
                 }
               },
               color: Colors.blue,
-              child: Text(
+              child: const Text(
                 "Watch YT",
                 style: TextStyle(
                   color: Colors.white

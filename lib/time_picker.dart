@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TimePicker extends StatefulWidget {
-  TimePicker({Key? key}) : super(key: key);
+  const TimePicker({Key? key}) : super(key: key);
 
   @override
   State<TimePicker> createState() => _TimePickerState();
@@ -9,7 +9,7 @@ class TimePicker extends StatefulWidget {
 
 class _TimePickerState extends State<TimePicker> {
 
-  TimeOfDay _timeOfDay = TimeOfDay(hour: 8, minute: 30);
+  TimeOfDay _timeOfDay = const TimeOfDay(hour: 8, minute: 30);
 
   void _showTimePicker() {
     showTimePicker(context: context, initialTime: TimeOfDay.now()).then((value) {
@@ -27,14 +27,14 @@ class _TimePickerState extends State<TimePicker> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Text(_timeOfDay.format(context).toString(),
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 50
           ),),
           MaterialButton(
             onPressed: _showTimePicker,
             color: Colors.blue,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
+            child: const Padding(
+              padding: EdgeInsets.all(20.0),
               child: Text(
                 "PICK TIME",
                 style: TextStyle(color: Colors.white, fontSize: 30),
