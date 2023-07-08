@@ -5,7 +5,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Spinnerz extends StatelessWidget {
   const Spinnerz({super.key});
-  // pubspec.yaml set sdk version >= 2.17.0 in env
+  // pubspec.yaml set sdk version sdk: ">=2.17.0 <3.0.0" in env
 
   @override
   Widget build(BuildContext context) {

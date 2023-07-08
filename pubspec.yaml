@@ -42,6 +42,7 @@ dependencies:
   provider:
   carousel_slider:
   flutter_spinkit:
+  flutter_speed_dial:
 
 dev_dependencies:
 

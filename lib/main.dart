@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_yt/spinnerz.dart';
+import 'package:widgets_yt/speed_dial.dart';
 
 void main() {
   runApp(
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Spinnerz(),
+      home: MySpeedDial(),
       debugShowCheckedModeBanner: false,
     );
   }
